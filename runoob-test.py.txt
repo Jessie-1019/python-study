@@ -1,0 +1,12 @@
+import math
+
+# 定义标准答案的函数
+def f_standard(t):
+    if t <= 0:
+        return None
+    return (2 + math.sqrt(t**2 + 4)) / t
+
+# 验算几个点
+print(f"f(1) = {f_standard(1)}")
+print(f"f(2) = {f_standard(2)}")
+print(f"f(3) = {f_standard(3)}")
