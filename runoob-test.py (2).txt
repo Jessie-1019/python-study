@@ -1,0 +1,51 @@
+companies = [
+    {
+        "name": "舍得酒业",
+        "industry": "酒类",
+        "date": "1996-05-24",
+        "business": "白酒产品的设计、生产、销售"
+    },
+    {
+        "name": "苹果公司",
+        "industry": "电脑与外围设备",
+        "date": "1980-12-12",
+        "business": "设计、制造和销售智能手机、平板电脑、可穿戴设备等"
+    },
+    {
+        "name": "温氏股份",
+        "industry": "养殖业",
+        "date": "2015-11-02",
+        "business": "肉鸡和肉猪的养殖及其销售"
+    },
+    {
+        "name": "寒武纪",
+        "industry": "半导体",
+        "date": "2020-07-20",
+        "business": "人工智能核心芯片的研发、设计和销售"
+    },
+    {
+        "name": "中体产业",
+        "industry": "体育",
+        "date": "1998-03-27",
+        "business": "体育赛事、体育传播、体育彩票、体育场馆等"
+    }
+]
+
+# 打印表格
+print("公司名称 | 行业 | 上市日期 | 主营业务")
+print("------------|--------|------------|------------")
+for c in companies:
+    print(f"{c['name']} | {c['industry']} | {c['date']} | {c['business']}")
+#新增公司（纯手工）
+company = {
+"name":"腾讯科技",
+"industry":"互联网服务",
+"date":"2004.6.16",
+"business":"网络服务，金融科技及企业服务",
+}
+print("公司名称",
+	 "行业",
+	 "上市日期",
+	 "业务",
+	 )
+print(f"{company['name']},{company['industry']},{company['date']},{company['date']},{company['business']}")
