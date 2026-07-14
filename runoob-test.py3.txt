@@ -1,0 +1,18 @@
+'''拼接
+1,无数字拼接直接用“a“＋“b”，会得到ab
+2，有数字拼接要加上％s:
+'''
+
+#1的第一种拼接：
+name = "Jessie"
+address = "在幼儿园"
+print(name+address)
+#1的第二种拼接
+print("我是"+name+"，我"+address)
+
+#2的拼接：
+name = "Jessie"
+name2 = "电话号码"
+phone_num = 13416198521
+message = (name+name2+"是：%s"%(phone_num))
+print(message)
