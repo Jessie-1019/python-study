@@ -1,0 +1,24 @@
+import math
+
+def verify_integral(original_expr,your_answer,test_point=2.0):
+    h = 0.0001
+    x = test_point
+
+    original_value = eval(original_expr)
+
+    x_plus = x+h
+    x_minus =x-h
+
+    ans_plus = eval(your_answer.replace('x',f'({x_plus})'))
+    ans_minus = eval(your_answer.replace('x',f'({x_minus})'))
+    derivative = (ans_plus-ans_minus)/(2*h)
+
+    print(f"被积函数在 x={x} 时的值：{original_value:.6f}")
+    print(f"你的原函数在 x={x} 时的导数：{derivative:.6f}")
+    print(f"误差:{abs(original_value - derivative):.10f}")
+
+    if abs(original_value - derivative) < 0.001:
+	    print("回答正确")
+    else:
+	    print("回答错误")
+verify_integral("1/(x**4*(x**2+1))","-1/3*x**(-3) + 1/x + math.atan(x)")
